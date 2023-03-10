@@ -1,0 +1,76 @@
+@import url(/Sass/cssreload.css);
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+$Primary: hsl(246, 80%, 60%);
+
+$Work: hsl(15, 100%, 70%);
+$Play: hsl(195, 74%, 62%);
+$Study: hsl(348, 100%, 68%);
+$Exercise: hsl(145, 58%, 55%);
+$Social: hsl(264, 64%, 52%);
+$Selfcare: hsl(43, 84%, 65%);
+
+
+$VeryDarkBlue: hsl(226, 43%, 10%);
+$DarkBlue: hsl(235, 46%, 20%);
+$DesaturatedBlue: hsl(235, 45%, 61%);
+$PaleBlue: hsl(236, 100%, 87%);
+
+$Font: 'Rubik';
+
+body{
+    font-family: $Font;
+    background-color: $VeryDarkBlue;
+}
+
+.container{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 25px;
+
+    .user_container{
+        
+        background-color: $DarkBlue;
+        border-radius:  10px;
+
+        .user{
+            display: flex;
+            background-color: $Primary;
+            align-items: center;
+            padding: 20px;
+            gap: 10px;
+            border-radius: 10px 10px 10px 10px ;
+            .names{
+                font-size: 0.6rem;
+                color: $PaleBlue;
+                font-weight: 300;
+
+                .name{
+                    margin: 3px 0;
+                    font-size: 0.9rem;
+                    font-family: $Font;
+                }
+            }
+            img{
+                border: 2px solid $PaleBlue;
+                border-radius: 50%;
+                width: 40px;
+            }
+        }
+
+        .detalle{
+            background-color: $DarkBlue;
+            border-radius: 0 0 10px 10px;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            font-size: 0.6rem;
+            color: $DesaturatedBlue;
+
+
+        }
+    }
+}
+

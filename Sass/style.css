@@ -1,0 +1,50 @@
+@import url(/Sass/cssreload.css);
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+body {
+  font-family: "Rubik";
+  background-color: hsl(226, 43%, 10%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 25px;
+}
+.container .user_container {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 10px;
+}
+.container .user_container .user {
+  display: flex;
+  background-color: hsl(246, 80%, 60%);
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 10px 10px 10px 10px;
+}
+.container .user_container .user .names {
+  font-size: 0.6rem;
+  color: hsl(236, 100%, 87%);
+  font-weight: 300;
+}
+.container .user_container .user .names .name {
+  margin: 3px 0;
+  font-size: 0.9rem;
+  font-family: "Rubik";
+}
+.container .user_container .user img {
+  border: 2px solid hsl(236, 100%, 87%);
+  border-radius: 50%;
+  width: 40px;
+}
+.container .user_container .detalle {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  font-size: 0.6rem;
+  color: hsl(235, 45%, 61%);
+}/*# sourceMappingURL=style.css.map */
