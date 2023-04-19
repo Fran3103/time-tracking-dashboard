@@ -3,6 +3,12 @@
 body {
   font-family: "Rubik";
   background-color: hsl(226, 43%, 10%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100vw;
 }
 
 .container {
@@ -13,38 +19,267 @@ body {
   padding: 70px 25px;
 }
 .container .user_container {
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  margin-bottom: 20px;
   background-color: hsl(235, 46%, 20%);
   border-radius: 10px;
 }
 .container .user_container .user {
+  width: 100%;
+  height: 100%;
   display: flex;
   background-color: hsl(246, 80%, 60%);
   align-items: center;
-  padding: 20px;
-  gap: 10px;
+  padding: 30px 35px 30px 25px;
+  gap: 20px;
   border-radius: 10px 10px 10px 10px;
 }
 .container .user_container .user .names {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   color: hsl(236, 100%, 87%);
   font-weight: 300;
 }
 .container .user_container .user .names .name {
   margin: 3px 0;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   font-family: "Rubik";
 }
 .container .user_container .user img {
   border: 2px solid hsl(236, 100%, 87%);
   border-radius: 50%;
-  width: 40px;
+  width: 60px;
+  margin-left: 10px;
 }
 .container .user_container .detalle {
   background-color: hsl(235, 46%, 20%);
   border-radius: 0 0 10px 10px;
   display: flex;
   justify-content: space-between;
-  padding: 15px;
-  font-size: 0.6rem;
+  padding: 17px 17px 22px 35px;
+  font-size: 0.9rem;
   color: hsl(235, 45%, 61%);
+}
+.container .user_container .detalle .menu {
+  font-size: 0.9rem;
+  color: hsl(235, 45%, 61%);
+}
+.container .user_container .detalle .menu-activo {
+  color: hsl(236, 100%, 87%);
+}
+.container .user_container .detalle .menu-activo:hover {
+  cursor: pointer;
+}
+.container .user_container .menu:hover {
+  cursor: pointer;
+}
+.container .seccion2 {
+  width: 100%;
+}
+.container .seccion2 .cards {
+  background-color: transparent;
+  width: 100%;
+  margin-bottom: 20px;
+  max-width: 450px;
+  height: 100%;
+  margin-bottom: 40px;
+  margin-top: 5px;
+}
+.container .seccion2 .cards .img_encabezado {
+  border-radius: 10px 10px 0 0;
+  background-color: hsl(15, 100%, 70%);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: hidden;
+}
+.container .seccion2 .cards .img_encabezado img {
+  width: 80px;
+  height: 80px;
+  margin-top: -5px;
+  margin-right: 10px;
+}
+.container .seccion2 .cards .Play {
+  background-color: hsl(195, 74%, 62%);
+}
+.container .seccion2 .cards .Study {
+  background-color: hsl(348, 100%, 68%);
+}
+.container .seccion2 .cards .Exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+.container .seccion2 .cards .Exercise img {
+  height: 60px;
+  margin-top: 0;
+}
+.container .seccion2 .cards .Social {
+  background-color: hsl(264, 64%, 52%);
+}
+.container .seccion2 .cards .Self-Care {
+  background-color: hsl(43, 84%, 65%);
+}
+.container .seccion2 .cards .Self-Care img {
+  margin-top: -20px;
+}
+.container .seccion2 .cards .sec:hover {
+  cursor: pointer;
+  background-color: hsl(235, 45%, 61%);
+}
+.container .seccion2 .cards .sec {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.container .seccion2 .cards .sec .encabezado {
+  position: relative;
+  margin-top: -10px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: end;
+  padding: 8px 17px 7px 24px;
+  color: hsl(236, 100%, 87%);
+  background-color: transparent;
+}
+.container .seccion2 .cards .sec .encabezado .mas {
+  font-size: 1.8rem;
+}
+.container .seccion2 .cards .sec .date {
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 20px 25px 24px;
+  background-color: transparent;
+}
+.container .seccion2 .cards .sec .date .horas {
+  font-size: 2rem;
+  color: hsl(236, 100%, 87%);
+}
+.container .seccion2 .cards .sec .date .last {
+  color: hsl(236, 100%, 87%);
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 750px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 200px 300px;
+    grid-template-rows: 150px 150px;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 1110px;
+    gap: 30px;
+    margin-left: -300px;
+  }
+  .container .user_container {
+    grid-column: 1;
+    height: auto;
+    grid-row: 1/3;
+    max-width: 260px;
+    background-color: hsl(235, 46%, 20%);
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: -20px;
+  }
+  .container .user_container .user {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 250px;
+    padding-bottom: 25px;
+    position: relative;
+    bottom: 20px;
+  }
+  .container .user_container .user .name {
+    padding-right: 20px;
+  }
+  .container .user_container .user img {
+    margin-left: 0;
+  }
+  .container .user_container .detalle {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    font-size: 0.7rem;
+    height: 120px;
+  }
+  .container .seccion2 {
+    grid-column: 2;
+    grid-row: 1/3;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 150px 150px;
+    gap: 50px;
+    margin-top: -50px;
+  }
+  .container .seccion2 .work {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .container .seccion2 .Play {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .container .seccion2 .Study {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .container .seccion2 .Exercise {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .container .seccion2 .Social {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .container .seccion2 .Self-Care {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  .container .cards {
+    height: auto;
+    max-width: 260px;
+  }
+  .container .cards .img_encabezado {
+    height: 40px;
+  }
+  .container .cards .img_encabezado img {
+    margin-top: 0;
+    width: 50px;
+    height: 50px;
+  }
+  .container .cards .encabezado {
+    font-size: 0.7rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .container .cards .encabezado .mas {
+    font-size: 1rem;
+  }
+  .container .cards .date {
+    flex-direction: column;
+    padding-top: 10px;
+  }
+  .container .cards .date .horas {
+    font-size: 2rem;
+  }
+  .container .cards .date .last {
+    font-size: 0.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -21,6 +21,12 @@ $Font: 'Rubik';
 body{
     font-family: $Font;
     background-color: $VeryDarkBlue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100vw;
 }
 
 .container{
@@ -31,46 +37,332 @@ body{
     padding: 70px 25px;
 
     .user_container{
-        
+        width: 100%;
+        height: 100%;
+        max-width: 450px;
+        margin-bottom: 20px;
         background-color: $DarkBlue;
         border-radius:  10px;
+        
 
         .user{
+            width: 100%;
+            height: 100%;
             display: flex;
             background-color: $Primary;
             align-items: center;
-            padding: 20px;
-            gap: 10px;
+            padding: 30px 35px 30px 25px;
+            gap: 20px;
             border-radius: 10px 10px 10px 10px ;
+            
             .names{
-                font-size: 0.6rem;
+                font-size: 0.8rem;
                 color: $PaleBlue;
                 font-weight: 300;
 
+
                 .name{
                     margin: 3px 0;
-                    font-size: 0.9rem;
+                    font-size: 1.5rem;
                     font-family: $Font;
                 }
             }
             img{
                 border: 2px solid $PaleBlue;
                 border-radius: 50%;
-                width: 40px;
+                width: 60px;
+                margin-left: 10px;
             }
         }
 
         .detalle{
             background-color: $DarkBlue;
+            
             border-radius: 0 0 10px 10px;
             display: flex;
             justify-content: space-between;
-            padding: 15px;
-            font-size: 0.6rem;
+            padding: 17px 17px 22px 35px;
+            font-size: 0.9rem;
             color: $DesaturatedBlue;
 
+            .menu{
+                
+                font-size: 0.9rem;
+                color: $DesaturatedBlue;
+            }
 
+            .menu-activo{
+                color: $PaleBlue;
+            }
+            .menu-activo:hover{
+                cursor: pointer;
+            }
+        }
+        
+        .menu:hover{
+            cursor: pointer;
+        }
+        
+        
+        }
+
+        
+
+
+
+    
+
+   .seccion2{
+    width: 100%;
+    .cards{
+        background-color: transparent;
+        width: 100%;
+        margin-bottom: 20px;
+        max-width: 450px;
+        height: 100%;
+        margin-bottom: 40px;
+        margin-top: 5px;
+        
+        
+        .img_encabezado{
+            border-radius: 10px 10px 0 0;
+            background-color: $Work;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: row-reverse;
+            overflow: hidden;
+                
+
+
+
+            img{
+                width: 80px;
+                height: 80px;
+                margin-top: -5px;
+                margin-right: 10px;
+                
+                
+            }
+        }
+        .Play{
+            background-color: $Play;
+        }
+        .Study{
+            background-color: $Study;
+        }
+        .Exercise{
+            background-color: $Exercise;
+            img{
+                height: 60px;
+                margin-top: 0;
+            }
+        }
+        .Social{
+            background-color: $Social;
+        }
+        .Self-Care{
+            background-color: $Selfcare;
+            img{
+                margin-top: -20px;
+            }
+        }
+        
+        .sec:hover{
+            cursor: pointer;
+            background-color: $DesaturatedBlue;
+        }
+        
+        .sec{
+            background-color: $DarkBlue;
+            border-radius: 10px;
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            .encabezado{
+                position: relative;
+                margin-top: -10px;
+                border-radius: 10px 10px 0 0;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: end;
+                padding: 8px 17px 7px 24px;
+                color: $PaleBlue;
+                background-color: transparent;
+                .mas{
+                    font-size: 1.8rem;
+                }
+                
+            }
+
+            .date{
+                border-radius: 0 0 10px 10px;
+                display: flex;
+                justify-content: space-between;
+                padding: 2px 20px 25px 24px;
+                background-color: transparent;
+                
+                .horas{
+                    font-size: 2rem;
+                    color: $PaleBlue;
+                }
+                .last{
+                    color: $PaleBlue;
+                    font-size: 0.8rem;
+                    margin-top: 10px;
+                }
+            }
+        }
+        
+    }
+        
+    }
+
+    }
+    
+    
+
+
+
+
+@media screen and (min-width: 750px) {
+
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 200px 300px ;
+        grid-template-rows: 150px 150px;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        max-width: 1110px;
+        gap: 30px;
+        margin-left: -300px;
+
+
+        
+        .user_container{
+            grid-column: 1;
+            height: auto;
+            grid-row: 1/3;
+            max-width: 260px;
+            background-color: $DarkBlue;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: -20px;
+            
+            
+            
+            
+            .user{
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                height: 250px;
+                padding-bottom: 25px;
+                position: relative;
+                bottom: 20px;
+                .name{
+                    padding-right: 20px;
+                }
+
+                img{
+                    margin-left: 0;
+                }
+                
+            }
+            .detalle{
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                font-size: 0.7rem;
+                height: 120px;
+                
+            }
+            
+        }
+        .seccion2{
+            grid-column: 2;
+            grid-row: 1/3;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 150px 150px;
+            gap: 50px;
+            margin-top: -50px;
+
+            .work{
+                grid-column: 1;
+                grid-row: 1;
+            }
+            .Play{
+                grid-column: 2;
+                grid-row: 1;
+            }
+            .Study{
+                grid-column: 3;
+                grid-row: 1;
+            }
+            .Exercise{
+                grid-column: 1;
+                grid-row: 2;
+            }
+            .Social{
+                grid-column: 2;
+                grid-row: 2;
+            }
+            .Self-Care{
+                grid-column: 3;
+                grid-row: 2;
+            }
+            }
+        
+
+        .cards{
+            height: auto;
+            max-width: 260px;
+            .img_encabezado{
+                height: 40px;
+                
+                img{
+                    margin-top: 0;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            .encabezado{
+                font-size: 0.7rem;
+                padding-top:10px;
+                padding-bottom: 10px;
+                .mas{
+                    font-size: 1rem;
+                }
+            }
+            .date{
+                flex-direction: column;
+                padding-top:10px;
+                .horas{
+                    font-size: 2rem;
+                }
+                .last{
+                    font-size: 0.5rem;
+                }
+            }
+            
         }
     }
+
+
+
+    
 }
 
